@@ -1,3 +1,13 @@
+:root {
+    --primary: #007979;
+    --secondary: #24B1B1;
+    --tertiary: #9F5B34;
+    --neutral: #737877;
+    --background: #f5f9f8;
+    --white: #ffffff;
+    --dark: #172323;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,5 +15,152 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+}
+
+
+.navbar {
+    height: 62px;
+    background-color: #e8eeee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid #d2dada;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333d3d;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.login-button {
+    background-color: var(--primary);
+    color: white !important;
+
+    padding: 8px 17px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+}
+
+
+.hero {
+    min-height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 38px 24px 42px 24px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 34px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    margin-bottom: 22px;
+
+    color: #101919;
+}
+
+.hero-content p {
+    max-width: 490px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--neutral);
+
+    margin-bottom: 27px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+
+    background-color: var(--primary);
+    color: white;
+
+    padding: 13px 22px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 2px;
+}
+
+.hero-button span {
+    font-size: 22px;
+}
+
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
 }
